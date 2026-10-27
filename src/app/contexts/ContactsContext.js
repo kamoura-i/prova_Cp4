@@ -28,7 +28,6 @@ export const ContactsProvider = ({ children }) => {
 
     const fetchContacts = useCallback(async () => {
         try {
-            setLoading(true);
             setError(null);
             const response = await contactsApi.get("/usuario");
             setContacts(response.data);
@@ -40,8 +39,10 @@ export const ContactsProvider = ({ children }) => {
         }
     }, []);
 
+
     useEffect(() => {
-        // TODO: carregar contatos ao iniciar
+        fetchContacts()
+        
     }, [fetchContacts]);
 
     const getContactById = useCallback(
