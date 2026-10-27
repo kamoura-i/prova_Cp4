@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 export function useFilter(items = []) {
     const [query, setQuery] = useState("");
 
-    const filteredItems = useMemo(() => {
+    const filteredContacts = useMemo(() => {
         const term = query.trim().toLowerCase();
         if (!term) return items;
         return items.filter((item) =>
@@ -15,5 +15,5 @@ export function useFilter(items = []) {
         );
     }, [items, query]);
 
-    return { query, setQuery, filteredItems };
+    return { query, setQuery, filteredContacts };
 }
