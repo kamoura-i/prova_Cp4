@@ -1,10 +1,10 @@
 "use client";
 
-import { useContactsContext } from "../app/contexts/ContactsContext ";
-import { useFilter } from "../app/hooks/useFilter ";
-import { useStatistics } from "../app/hooks/useStatistics ";
+import { useContactsContext } from "../app/contexts/ContactsContext"; // ERRO 1
+import { useFilter } from "../app/hooks/useFilter"; // ERRO 2
+import { useStatistics } from "../app/hooks/useStatistics"; // ERRO 3
 import FilterInput from "./components/FilterInput";
-import Statistics from "../app/components/Statistics ";
+import Statistics from "../app/components/Statistics"; // ERRO 4
 import ContactList from "./components/ContactList";
 
 export default function HomePage() {

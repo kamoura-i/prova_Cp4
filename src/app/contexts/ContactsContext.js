@@ -27,10 +27,13 @@ export const ContactsProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
     const fetchContacts = useCallback(async () => {
+
         try {
             setError(null);
             const response = await contactsApi.get("/usuario");
             setContacts(response.data);
+            console.log(response)
+            console.log(contacts)
         } catch (err) {
             setError("Falha ao carregar contatos");
             setContacts([]);
@@ -42,7 +45,6 @@ export const ContactsProvider = ({ children }) => {
 
     useEffect(() => {
         fetchContacts()
-        
     }, [fetchContacts]);
 
     const getContactById = useCallback(
@@ -53,7 +55,7 @@ export const ContactsProvider = ({ children }) => {
     );
 
     return (
-        <ContactsContext.Provider value={{ contacts, loading, error }}>
+        <ContactsContext.Provider value={{ contacts, loading, error, getContactById }}>
             {children}
         </ContactsContext.Provider>
     );
