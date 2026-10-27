@@ -4,7 +4,7 @@ import { useContactsContext } from "../app/contexts/ContactsContext ";
 import { useFilter } from "../app/hooks/useFilter ";
 import { useStatistics } from "../app/hooks/useStatistics ";
 import FilterInput from "./components/FilterInput";
-import Statistics from "../app/components/Statistics";
+import Statistics from "../app/components/Statistics ";
 import ContactList from "./components/ContactList";
 
 export default function HomePage() {
