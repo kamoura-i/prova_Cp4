@@ -1,7 +1,7 @@
 "use client";
 
 import { useContactsContext } from "../app/contexts/ContactsContext ";
-import { useFilter } from "../app/hooks/useFilter";
+import { useFilter } from "../app/hooks/useFilter ";
 import { useStatistics } from "../app/hooks/useStatistics";
 import FilterInput from "./components/FilterInput";
 import Statistics from "../app/components/Statistics";
